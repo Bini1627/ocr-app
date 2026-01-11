@@ -10,7 +10,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",   # React dev server
-        "https://ocr-app-sooty.vercel.app",
+        "https://ocr-app-psi-rose.vercel.app/",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -32,4 +32,5 @@ async def ocr_endpoint(
         return {"text": text}
     except Exception as e:
         logging.error(f"OCR error: {e}")
-        raise HTTPException(500, "Failed to process image")
+        # Still return valid JSON — FastAPI will add CORS headers
+        raise HTTPException(500, "Failed to process image. Please try again.")
