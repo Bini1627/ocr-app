@@ -1,4 +1,4 @@
-const API_BASE = "https://ocr-backend-ed9j.onrender.com";
+const API_BASE = "https://ocr-backend-0w8s.onrender.com";
 
 export const ocrImage = async (file, lang = 'eng') => {
   const formData = new FormData();
