@@ -12,3 +12,14 @@ dependencies:
   http: ^1.2.1
   image_picker: ^1.1.2
   permission_handler: ^11.3.1
+  file_selector: ^0.9.0
+
+# 👇 Fonts go under 'flutter', NOT under 'dependencies'
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: NotoSansEthiopic
+      fonts:
+        - asset: assets/fonts/NotoSansEthiopic-Regular.ttf
+        - asset: assets/fonts/NotoSansEthiopic-Bold.ttf
+          weight: 700
